@@ -1,0 +1,47 @@
+.register {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.authentication-form {
+  margin-top: 54px;
+  text-align: center;
+
+  &-element {
+    margin-bottom: 14px;
+
+    label {
+      width: 80px;
+    }
+
+    &__button {
+      margin: auto;
+    }
+  }
+
+  &__input {
+    border-radius: 6px;
+    border: 1px solid #000;
+    padding: 10px 15px;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #77ced9;
+    border: none;
+    outline: none;
+  }
+  
+  &__button:hover {
+    background: #7bbbc6;
+  }
+}

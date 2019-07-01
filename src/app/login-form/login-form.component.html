@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="register">
+    <a href="">Register</a>
+  </div>
+  <form class="authentication-form" name="authentication-form">
+    <div class="authentication-form-element">
+      <label for="authentication-form-login">Login</label>
+      <input type="text"
+             id="authentication-form-login"
+             name="authentication-form__login"
+             class="authentication-form__input"
+             placeholder="Enter Your login"
+             [(ngModel)]="userLoginInfo.userLogin">
+    </div>
+    <div class="authentication-form-element">
+      <label for="authentication-form-password">Password</label>
+      <input type="password"
+             id="authentication-form-password"
+             name="authentication-form__password"
+             class="authentication-form__input"
+             placeholder="Enter Your password"
+             [(ngModel)]="userLoginInfo.userPassword">
+    </div>
+    <div class="authentication-form-element__button">
+      <button class="authentication-form__button" (click)="tryLogin()">Log in</button>
+    </div>
+  </form>
+</div>
