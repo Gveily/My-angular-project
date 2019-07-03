@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Login} from '../Interfaces/Login';
 import {LoginServiceService} from '../login-service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -13,15 +14,14 @@ export class LoginFormComponent implements OnInit {
     userPassword: ''
   };
 
-  constructor (private loginService: LoginServiceService) {}
+  constructor (private loginService: LoginServiceService,
+               private router: Router) {}
 
   tryLogin() {
     this.loginService
       .tryLogin(this.userLoginInfo.userLogin, this.userLoginInfo.userPassword)
       .subscribe((res) => {
-        // this.loginData = JSON.parse(res);
-        // console.log(this.loginData);
-        console.log(res);
+        this.router.navigate(['./messenger']);
       })
   }
 

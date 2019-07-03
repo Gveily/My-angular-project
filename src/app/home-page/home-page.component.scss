@@ -1,0 +1,27 @@
+.greeting-form {
+  margin-top: 128px;
+
+  &__message {
+    text-align: center;
+    color: #fff;
+  }
+
+  &__links {
+    padding: 35px;
+    border-radius: 21px;
+    background: #fff;
+    margin: 64px auto 0;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+  }
+
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+    background: #77ced9;
+    font-size: 25px;
+    border-radius: 30px;
+  }
+}

@@ -21,4 +21,21 @@ server.post("/api/login", function(req, res) {
   }
 });
 
+server.post('/api/register', function (req, res) {
+  var isUserExist = usersData.users.find((element) => {
+    return element.login === req.body.login;
+  });
+
+  if (req.body.password === req.body.submitPassword && !isUserExist) {
+    usersData.users.push(req.body);
+    console.log(req.body);
+    console.log(usersData.users);
+  } else if (isUserExist){
+    res.send(400).send('user already exists');
+  } else if (req.body.password !== req.body.submitPassword) {
+    res.sendStatus(400);
+    console.log('incorrect password');
+  }
+});
+
 server.listen(3000, console.log('server started successful on 3000 port'));

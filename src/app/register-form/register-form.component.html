@@ -1,7 +1,7 @@
 <div class="container">
   <div class="register">
     <a routerLink="/">Home</a>
-    <a routerLink="/register-form">Register</a>
+    <a routerLink="/login-form">Sign in</a>
   </div>
   <form class="authentication-form" name="authentication-form">
     <div class="authentication-form-element">
@@ -11,7 +11,7 @@
              name="authentication-form__login"
              class="authentication-form__input"
              placeholder="Enter Your login"
-             [(ngModel)]="userLoginInfo.userLogin">
+             [(ngModel)]="userRegisterInfo.userLogin">
     </div>
     <div class="authentication-form-element">
       <label for="authentication-form-password">Password</label>
@@ -20,10 +20,19 @@
              name="authentication-form__password"
              class="authentication-form__input"
              placeholder="Enter Your password"
-             [(ngModel)]="userLoginInfo.userPassword">
+             [(ngModel)]="userRegisterInfo.userPassword">
+    </div>
+    <div class="authentication-form-element">
+      <label for="authentication-form-submit-password">Password</label>
+      <input type="password"
+             id="authentication-form-submit-password"
+             name="authentication-form__password"
+             class="authentication-form__input"
+             placeholder="Enter Your password"
+             [(ngModel)]="userRegisterInfo.userSubmitPassword">
     </div>
     <div class="authentication-form-element__button">
-      <button class="authentication-form__button" (click)="tryLogin()">Log in</button>
+      <button class="authentication-form__button" (click)="tryRegister()">Register</button>
     </div>
   </form>
 </div>
